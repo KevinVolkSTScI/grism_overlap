@@ -24,6 +24,7 @@ fits_image_display.py
 general_utilities.py
 gr700xd_psfimage.fits
 grism_overlap_tool.py
+mirage_format.py
 mpfit.py
 mpfitexpr.py
 niriss_NIS_x1024_y1024_f090w_predicted_0_0p00_0p00.fits
