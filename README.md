@@ -49,10 +49,7 @@ Astropy can be found at https://www.astropy.org/.  The pysiaf code is found at h
 
 # Running The Code
 
-One simply invokes the main code 'grism_overlap_tool.py' from the command line, with no parameters.  To test the code one needs at minimum a Mirage 
-NIRISS point source input file, so an example is provided in 'stars_bd601753_gaia_allfilters.list'.  This file is for the field of the photometric
-standard BD+30 1753, the star being source 312 on the list at sky position RA=261.217858, Dec=60.430781.  This is suitable for testing the SOSS mode 
-case.  Another example more suitable for the WFSS case is provided in the file stars_wdfield_combined_allfilters.list.  The target here is WD1657+343.  This star, another photometric standard, is star 158 in the list at sky position RA=254.713015, Dec=34.314677.
+One simply invokes the main code 'grism_overlap_tool.py' from the command line, with no parameters.  To test the code one needs at minimum a Mirage NIRISS point source input file, so an example is provided in 'stars_bd601753_gaia_allfilters.list'.  This file is for the field of the photometric standard BD+30 1753, the star being source 312 on the list at sky position RA=261.217858, Dec=60.430781.  This is suitable for testing the SOSS mode case.  Another example more suitable for the WFSS case is provided in the file stars_wdfield_combined_allfilters.list.  The target here is WD1657+343.  This star, another photometric standard, is star 158 in the list at sky position RA=254.713015, Dec=34.314677.
  
 Documentation is available in the files grism_overlap.docx and grism_overlap.pdf which show how the code can be used.
 
