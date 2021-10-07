@@ -770,6 +770,15 @@ class grismOverlap(Tk.Frame):
 if __name__ == "__main__":
     # create the window
     root = Tk.Tk()
-    root.title('NIRISS Grism Overlap Tool')
+    # One can change the background colour from white to some other
+    # value as one wishes.  The setting works for people with foreground
+    # set to white and background set to black by default.  In such a case
+    # the button labels will be white on white and not be visible.
+    #
+    # If you have such an issue, uncomment the tk_setPalete command below.
+    #
+    #root.tk_setPalette(background='white', foreground='black',
+    #    activeBackground='black', activeForeground='white')
+    #root.title('NIRISS Grism Overlap Tool')
     offsettool = grismOverlap(root)
     root.mainloop()
