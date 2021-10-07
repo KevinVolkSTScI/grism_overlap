@@ -50,7 +50,6 @@ def wfss_scene(scene_image, filtername, grismname, x0, y0, path='./'):
         print('Error: bad grism name %s passed to wfss_scene' % (filtername))
         return None
     imshape = scene_image.shape
-    print(scene_image.shape)
     if (x0 < 0) or (y0 < 0) or (x0+2322 > imshape[1]) or (y0+2322 > imshape[0]):
         print('Error in wfss_scene: bad image offset values' + \
               '(%d, %d) passed to the routine.' % (x0, y0))

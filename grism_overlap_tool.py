@@ -554,6 +554,8 @@ class grismOverlap(Tk.Frame):
         if self.imagewin is None:
             return
         angle = self.anglevar.get()
+        grism_option = self.grismvar.get()
+        offset_option = self.offsetvar.get()
         display_option = self.typevar.get()
         image_option = self.imagevar.get()
         total_option = image_option*10+display_option
@@ -564,6 +566,8 @@ class grismOverlap(Tk.Frame):
         if (self.last_type is None) or (total_option != self.last_type):
             option = True
             self.last_type = total_option
+        self.imagewin.grismtype = grism_option
+        self.imagewin.offsettype = offset_option
         self.imagewin.displayImage(getrange=option, angle=angle)
 
 

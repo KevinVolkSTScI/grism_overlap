@@ -65,6 +65,8 @@ class ImageGUI(Tk.Frame):
         self.root = None
         self.indpi = 100
         self.zoom = [1, 0, 0]
+        self.grismtype = 0
+        self.offsettype = 0
         self.xposition = None
         self.yposition = None
         self.angle = None
@@ -1098,11 +1100,16 @@ class ImageGUI(Tk.Frame):
                 self.colourBarVariable.ax.set_xlabel(cblabel, rotation=0)
             sh1 = self.image.shape
             if self.zoom[0] == 1:
-                if sh1[0] == 3631:
-                    xline1 = numpy.asarray([655, 2977, 2977, 655, 655])
-                    yline1 = numpy.asarray([655, 655, 2977, 2977, 655])
-                    xline2 = numpy.asarray([792, 2840, 2840, 792, 792])
-                    yline2 = numpy.asarray([792, 792, 2840, 2840, 792])
+                if sh1[0] == 4231:
+                    xline1 = numpy.asarray([955, 3277, 3277, 955, 955])
+                    yline1 = numpy.asarray([955, 955, 3277, 3277, 955])
+                    xline2 = numpy.asarray([1092, 3140, 3140, 1092, 1092])
+                    yline2 = numpy.asarray([1092, 1092, 3140, 3140, 1092])
+                    if (self.grismtype == 2) and (self.offsettype == 0):
+                        xline1 = xline1 - 931
+                        xline2 = xline2 - 931
+                        yline1 = yline1 - 175
+                        yline2 = yline2 - 175
                     self.mplsubplot1.plot(xline1, yline1, color='white',
                                           linestyle='dashed', linewidth=1.0)
                     self.mplsubplot1.plot(xline2, yline2, color='white',
